@@ -1,0 +1,73 @@
+h1{
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    font-size: 50px;
+    padding: 4px;
+    background-color: cadetblue;
+    display: block;
+    position: relative;
+}
+
+div.main-body{
+    display: grid;
+    grid-template-columns: minmax(200px, auto) 1fr;
+    grid-template-areas: "navbar mainContent";
+    grid-gap: 20px;
+    background-color: rgba(172, 231, 255, 0.8);
+}
+#navbar{
+    grid-area: navbar;
+    position: fixed;
+   
+}
+#navbar a{
+    display: block;
+    border: 2px solid black;
+    padding: 6px;
+    text-decoration: none;
+    margin: 10px 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+#main-doc{
+    grid-area: mainContent;
+}
+header{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+code{
+    background-color: gray;
+    display: block;
+    font-size: 18px;
+    padding: 20px;
+}
+b{
+    font-size: 15px;
+}
+p{
+    font-size: 20px;;
+    font-family: Arial;
+}
+#feature{
+    font-size: 15px;
+}
+footer{
+    text-align: center;
+    background-color: gray;
+    display: block;
+}
+li{
+    font-size: 15px;
+}
+@media screen and (max-width:400px){
+    main#main-body{
+        grid-template-columns: 1fr;
+        grid-template-areas: "navbar" "mainContent";
+    }
+    #navbar{
+        position: inherit;
+    }
+}
